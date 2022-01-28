@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table{box-sizing:border-box; width: 600px; height: 400px;}
+        table,th,td{border:1px solid black; border-collapse: collapse; text-align: center;}
+        th{width: 120px; height: 60px;}
+    </style>
+    <script>
+        $(function(){
+            $("#num").val("1");
+            $("#btn").click(function(){
+                // alert("버튼확인");
+                if ($("#user_id").val() != "admin")
+                    alert("아이디를 다시 확인하세요!");
+                else 
+                    alert("지정된 아이디입니다.");
+                
+                    num = Number($("#num").val());
+                    var num = $("#num").val();
+                    var title = $("#title").val();
+                    var date = $("#date").val();
+                    var user_id = $("#user_id").val();
+                        
+                    var in_html = ""
+                    in_html += "<tr id='"+ num +"' onclick='hitCount("+num+")'>"; 
+                    in_html += "<td>"+ num +"</td>"; 
+                    in_html += "<td>"+ title +"</td>"; 
+                    in_html += "<td>"+ date +"</td>"; 
+                    in_html += "<td>"+ user_id +"</td>"; 
+                    in_html += "<td>0</td>"; 
+                    in_html += "</tr>"; 
+                    num++;
+                    
+                    if(num == 1) $("#contxt").html(in_html);
+                    else $("#contxt").prepend(in_html);
+                    
+                    if($("input:checkbox[name=accept]:checked").length<2){
+                        alert("2개의 선택박스 모두를 선택하셔야합니다.");
+                        return false;
+                    }else{
+                        alert("조건 충족! 정보들을 입력합니다.");
+                        $("#contxt").prepend(in_html);
+                        
+                $("#num").val(num);
+                var title = $("#title").val("");
+                var date = $("#date").val("");
+                var user_id = $("#user_id").val("");
+                
+                }
+            
+            });
+        
+
+        
+            });
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <label>ID</label>
+    <input type="text" name="user_id" id="user_id">
+    <button id = "btn">중복확인</button><br><br>
+    <label>제목</label>
+    <input type="text" name="title" id="title"> <input type="checkbox" name="accept" id="accept"><br><br>
+    <label>날짜</label>
+    <input type="date" name="date" id="date"><input type="checkbox" name="accept" id="accept"><br><br>
+
+    <table>
+        <thead>
+            
+            <tr>
+                
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+                <th>ID</th>
+                <th>조회수</th>
+    
+            </tr>
+
+        </thead>
+        <tbody id = "contxt">
+
+        </tbody>
+    </table>
+
+</body>
+</html>

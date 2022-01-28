@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+div{width:300px; height: 200px; border:1px solid black;}
+
+</style>
+
+</head>
+<body>
+    <div id ="d01">
+        좋은 하루 보내세요.
+    </div>
+
+    <script>
+        var str = "1,90,40,30,80";
+        var strArr = str.split(",");
+        var numArr2 = str.split(",").map(Number);
+        var numArr = [];
+        for(var i=0;i<strArr.length;i++){
+            numArr[i] = Number(strArr[i]);
+        }
+        
+        document.write(typeof(strArr[0],"<br>"));
+        document.write(strArr[0],"<br>");
+        document.write(strArr[1],"<br>");
+        document.write(strArr[2],"<br>");
+        document.write(strArr[3],"<br>");
+        document.write(strArr[4],"<br>");
+        document.write(strArr.sort(),"<br>");
+        document.write("최대값 : ",Math.max(numArr[0],numArr[1],numArr[2],numArr[3],numArr[4]));
+        Math.max(numArr[0],numArr[1],numArr[2],numArr[3],numArr[4]);
+        //최대값, 최소값, 순차정렬, 역순정렬
+        Math.max.apply(null,numArr);
+        document.write("numArr2 최대값 : ",Math.max.apply(null,numArr)),"<br>"
+
+
+        strArr.sort(function(a,b){
+            return a-b; //오름차순
+            })
+        document.write().innerText = strArr;
+            
+        strArr.sort(function(a,b){
+            return b-a; //내림차순
+            });
+        document.write().innerText = strArr;
+
+        
+
+
+        // document.getElementById("d01").innerText="좋은 하루 보내세요.";
+        document.getElementById("d01").innerHTML="<h2>좋은 하루 보내세요.</h2>";
+
+    </script>
+</body>
+</html>

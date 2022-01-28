@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function() {
+            //홀수일 때 red,black - c01만 
+            //짝수일 때 blue, orange - c02만
+            var i=0;
+            $("button").click(function(){
+                if (i%4==1){
+                    $(".c01").css("color","red");
+                }else if (i%4==2){
+                    $(".c01").css("color","black");
+                }else if (i%4==3){
+                    $(".c02").css("color","blue");
+                }else if (i%4==0){
+                    $(".c02").css("color","black");
+                }
+                $("#txt1").text((i+1)+"번쨰 클릭");
+                i++;
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li class="c01">네이버</li>
+        <li class="c02">다음</li>
+        <li class="c01">네이트</li>
+        <li class="c02">구글</li>
+        <li class="c01">배달의 민족</li>
+        <li class="c02">쿠팡</li>
+        <li class="c01">지마켓</li>
+        
+
+    </ul>
+    <p id="txt1"></p>
+    <button>버튼</button>
+</body>
+</html>

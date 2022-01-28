@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table,th,td{border:1px solid black; border-collapse: collapse;
+                    width:200px; height: 50px; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <label>첫번째 값 입력 : </label>
+        <input type ="text" name="num1" id ="num1">
+        <label>두번째 값 입력 : </label>
+        <input type ="text" name="num2" id ="num2"><br>
+        <label>첫번째 값 입력 : </label>
+        <input type ="text" name="num3" id ="num3">
+        <label>두번째 값 입력 : </label>
+        <input type ="text" name="num4" id ="num4"><br>
+        <label>첫번째 값 입력 : </label>
+        <input type ="text" name="num5" id ="num5">
+        <label>두번째 값 입력 : </label>
+        <input type ="text" name="num6" id ="num6"><br>
+        <br>
+        <button type="button" onclick="f_cal()">확인</button>
+    </form>
+    <br>
+    <table>
+        <tr>
+            <td>1차</td>
+            <td id="t01"></td>
+            <td id="t02"></td>
+            <td id="t03"></td>
+            <td id="t04"></td>
+        </tr>
+        <tr>
+            <td>2차</td>
+            <td id="t01"></td>
+            <td id="t02"></td>
+            <td id="t03"></td>
+            <td id="t04"></td>
+        </tr>
+        <tr>
+            <td>3차</td>
+            <td id="t01"></td>
+            <td id="t02"></td>
+            <td id="t03"></td>
+            <td id="t04"></td>
+        </tr>
+    </table>
+<script>
+    
+    function f_cal(){
+            // 호출해서 데이터값을 num1, num2에 넣을것
+    var result1 = [];
+           //2수를 가져옴.
+    var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+    var num3 = Number(document.getElementById("num3").value);
+    var num4 = Number(document.getElementById("num4").value);
+    var num5 = Number(document.getElementById("num5").value);
+    var num6 = Number(document.getElementById("num6").value);
+
+    result1 = cal(num1,num2);
+    document.getElementById("t01").innerText = result1[0];
+    document.getElementById("t02").innerText = result1[1];
+    document.getElementById("t03").innerText = result1[2];
+    document.getElementById("t04").innerText = result1[3];
+           //
+        }
+
+
+        function cal(num){
+            // 4칙연산을 해서 4개의 값을 리턴 방법 무엇일까요?? 
+            var result1 =[];
+            result1[0] = num1+num2;
+            result1[1] = num1-num2;
+            result1[2] = num1*num2;
+            result1[3] = num1/num2;
+            return result1;
+        }
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

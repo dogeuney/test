@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label>첫번째 값 입력 : </label>
+        <input type ="text" name="num1" id ="num1"><br>
+        <label>두번째 값 입력 : </label>
+        <input type ="text" name="num2" id ="num2"><br>
+        <label>세번째 값 입력 : </label>
+        <input type ="text" name="num3" id ="num3"><br>
+        <label>네번째 값 입력 : </label>
+        <input type ="text" name="num4" id ="num4"><br>
+        <label>다섯번째 값 입력 : </label>
+        <input type ="text" name="num5" id ="num5"><br>
+        <label>여섯번째 값 입력 : </label>
+        <input type ="text" name="num5" id ="num6"><br>
+        <label>일곱번째 값 입력 : </label>
+        <input type ="text" name="num5" id ="num7"><br>
+        <label>여덟번째 값 입력 : </label>
+        <input type ="text" name="num5" id ="num8"><br>
+        <button type="button" onclick="f_cal()">숫자 정렬</button>
+    </form>
+
+    <h2>오름차순 정리</h2>
+    <h2 id = "result1"></h2>
+    <h2>내림차순 정리</h2>
+    <h2 id = "result2"></h2>
+
+    <script>
+        function f_cal(){
+            var arr_1 = [];
+            for(var i=0; i<8; i++){
+            arr_1[i] = Number(document.getElementById("num"+(i+1)).value);
+            }  
+            arr_1.sort(function(a,b){
+            return a-b; //오름차순
+            })
+            
+            document.getElementById("result1").innerText = arr_1;
+            
+            arr_1.sort(function(a,b){
+            return b-a; //내림차순
+            });
+            
+            document.getElementById("result2").innerText = arr_1;
+        }
+
+    </script>
+</body>
+</html>

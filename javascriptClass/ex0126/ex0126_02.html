@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"MOCK_DATA.json", //보낼주소
+                type:"get", //겟방식으로
+                data:{"boardNum":"5"}, //키값 벨류값
+                dataType:"json",
+                success:function(data){
+                    // alert("성공"+data[0].boardNum);
+                    // alert("성공"+data[0].title);
+                    // alert("성공"+data[0].id);
+                    // alert("성공"+data[0].date);
+                    // alert("성공"+data[0].hit);
+
+                    let datahtml=""; //data를 1개의 파일로 변경
+                    for (var i in data){
+                        datahtml += "<tr>"
+                        datahtml += "<td>"+data[i].boardNum+"</td>"
+                        datahtml += "<td>"+data[i].title+"</td>"
+                        datahtml += "<td>"+data[i].id+"</td>"
+                        datahtml += "<td>"+data[i].date+"</td>"
+                        datahtml += "<td>"+data[i].hit+"</td>"
+                        datahtml += "<tr>"
+                    }
+                    $("#content").html(datahtml);
+                },
+                error:function(){
+                    alert("실패");
+                }
+            });
+        });
+
+    </script>
+    <style>
+        table,th,td{border:1px solid black; border-collapse: collapse;}
+        th,td{width:200px; height: 40px; text-align: center;}
+        th:nth-child(1){width: 100px;}
+        th:nth-child(2){width: 300px;}
+        th:nth-child(3){width: 100px;}
+        th:nth-child(4){width: 100px;}
+        th:nth-child(5){width: 80px;}
+    </style>
+</head>
+<body>
+    <h2>회원리스트</h2>
+    <table>
+        <thead>
+            
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+                <th>조회수</th>
+            </tr>
+        
+        </thead>
+        <tbody id ="content">
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+<!-- select *from board where boardNum=5; -->

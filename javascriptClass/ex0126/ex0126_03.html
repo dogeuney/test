@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"MOCK_DATA.json",
+                type:"get",
+                data:{"id":"aaa","pw":"1111"},
+                dataType:"json",
+                success:function(data){
+                    alert("로그인성공"+data[0].id);
+                    alert("로그인성공"+data[1].id);
+                    alert("로그인성공"+data[2].id);
+                    alert("로그인성공"+data[3].id);
+                    alert("로그인성공"+data[4].id);
+
+                }
+            });
+        });
+
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

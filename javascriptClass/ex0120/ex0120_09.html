@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{border: 1px solid black; border-collapse: collapse;}
+        th, td{width: 80px; text-align: center;}
+        </style>
+        <script>
+            function cal(){
+                let id = document.getElementById("name").value;
+                let koScore = Number(document.getElementById("ko").value);
+                let enScore = Number(document.getElementById("en").value);
+                let maScore = Number(document.getElementById("ma").value);
+    
+                let sum = koScore + enScore + maScore;
+                let avg = sum/3;
+    
+                document.getElementById("nameId").innerText=id;
+                document.getElementById("koScore").innerText=koScore;
+                document.getElementById("enScore").innerText=enScore;
+                document.getElementById("maScore").innerText=maScore;
+                document.getElementById("sum").innerText=sum;
+                document.getElementById("avg").innerText=avg;
+            }
+        </script>
+</head>
+<body>
+    <!-- 이름, 국어, 영어, 수학 입력을 받아 국어,영어,수학의 합계 및 평균구하기-->
+    <form action="#" method="get">
+        <label>이름</label>
+        <input type="text" name="name" id="name">
+        <label>국어</label>
+        <input type="text" name="ko" id="ko">
+        <label>영어</label>
+        <input type="text" name="en" id="en">
+        <label>수학</label>
+        <input type="text" name="ma" id="ma">
+        <button type="button" onclick="cal()">입력</button>
+    </form>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>합계</th>
+            <th>평균</th>
+        </tr>
+        <tr>
+            <td id="nameId"></td>
+            <td id="koScore"></td>
+            <td id="enScore"></td>
+            <td id="maScore"></td>
+            <td id="sum"></td>
+            <td id="avg"></td>
+        </tr>
+    </table>
+</body>
+</html>

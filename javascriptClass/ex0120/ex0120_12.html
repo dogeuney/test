@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #galleryZone{width: 700px; height: 600; overflow: hidden; border: 3px solid black;}
+        #btn{width: 220px; height: 50px; margin: 20 auto;}
+        button{width: 100px; height: 50px; border-radius: 5px;}
+        img{width: 700px; height: 700px;}
+    </style>
+    <script>
+            let num = 1
+            function gallery(check){
+                alert(check);
+                if (check==1){
+                    if (num==5) num=0;
+                    num++;
+                } else{
+                    if(num==1) num=6;
+                    num--;
+                    
+                }
+                let imgId = document.getElementById("photo");
+                imgId.setAttribute("src", "../images/image"+num+".jfif");
+            }
+    </script>
+</head>
+<body>
+    <div id="galleryzone">
+        <img src="../images/image1.jfif" id="photo">
+    </div >
+    <div id="btn">
+        <button onclick="gallery(0)"> ◁이전</button>    
+        <button onclick="gallery(1)">다음▷</button>    
+    </div>
+</body>
+</html>

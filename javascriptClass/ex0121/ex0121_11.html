@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        input{width:150px; height: 25px; border:1px solid #888888; border-radius: 10px;
+        margin-bottom: 10px;}
+        table,th,td{border:1px solid #888888; border-collapse: collapse;}
+        th,td{width:300px; height: 40px; text-align: center; font-size: 14px;}
+        td{font-size: 12px;}
+    
+    </style>
+    <script>
+        $(function(){ 
+            $("#btn").click(function(){
+            var htmldata="";   
+            htmldata = htmldata+"<tr>";
+            htmldata = htmldata+"<td>"+$("#user_id").val()+"</td>";  
+            htmldata = htmldata+"<td>"+$("#user_name").val()+"</td>";     
+            htmldata = htmldata+"<td>"+$("#user_e").val()+"</td>";     
+            htmldata = htmldata+"<td>"+$("#signdate").val()+"</td>";    
+            htmldata = htmldata+"</tr>";
+            
+            $("#info").prepend(htmldata);    //append - 뒷부분, html - 모든 것 삭제후 다시 추가.
+            $("#user_id").val("");
+            $("#user_name").val("");
+            $("#user_e").val("");
+            $("#signdate").val("");
+
+            });
+    });
+            
+
+
+    </script>
+</head>
+<body>
+<body>
+    <label>아이디 : </label>
+    <input type="text" name="user_id" id="user_id"><br>
+    <label>이름 : </label>
+    <input type="text" name="user_name" id="user_name"><br>
+    <label>이메일 : </label>
+    <input type="text" name="user_e" id="user_e"><br>
+    <label>회원가입일자 : </label>
+    <input type="date" name="signdate" id="signdate"><br>
+    <button id = "btn"> 등록 확인</button>
+    <h1>회원 목록</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>아이디</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>회원가입일자</th>
+            </tr>
+        </thead>
+        <tbody id = "info">
+        </tbody>
+    </table>
+
+
+</body>
+</html>

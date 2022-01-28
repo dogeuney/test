@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>서울특별시 - 다시 뛰는 공정도시 서울</title>
+    <style>
+        *{margin:0 auto; padding:0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
+        .top-area{width: 1152px; height: 48px; border: 1px solid #222222;; font-weight: 700;
+            font-size: 14px; vertical-align: baseline; background: transparent;
+            font-weight: 400;
+        }
+        .logo{float: left; width:97px; height: 19px; margin: 12px;}
+        .inner{border:1px solid #222222; width: 1152px; height: 48px;
+            font-size: 14px; font-weight: 400;}
+        .gnb{width:1152px; height: 48px; font-size: 14px; font-weight: 400; font-style: normal;
+            vertical-align: baseline; line-height: 40px;
+        }
+        ul,li{float:left; list-style: none; font-size: 10px;}
+        .main{width:590px; height: 48px; font-size: 8px;}
+        .gnb>ul>li:nth-child(1){width:57px; height: 48px; position: relative;}
+        .gnb>ul>li:nth-child(2){width:57px; height: 48px; margin-left:20px;}
+        .gnb>ul>li:nth-child(3){width:57px; height: 48px; margin-left:20px;}
+        .gnb>ul>li:nth-child(4){width:57px; height: 48px; margin-left:50px;}
+        .gnb>ul>li:nth-child(5){width:57px; height: 48px; margin-left:40px;}
+        .gnb>ul>li:nth-child(6){width:70px; height: 48px; margin-left:40px;}
+        .other{float: left; margin-left: 200px;}
+        .other>li{margin: 0px; padding:0px;}
+        .other>li:nth-child(1){padding-left: 20px;}
+        .other>li:nth-child(2){padding-left: 20px;}
+        .other>li:nth-child(3){padding-left: 20px;}
+        #toptrpmenu{width: 180px; height:200px; border:1px solid black;}
+        .toptrpmenu_m{border:1px solid black; width : 80px; height: 200px; float: left; text-align: center;}
+        .toptrpmenu2{border:1px solid black; width : 80px; height: 200px; float: left;}
+        .toptrpmenu2>li{border:1px solid black; width : 85px; height: 50px; float: left;}
+    </style>
+
+</head>
+<body>
+    <div class="top-area">
+		<div class="inner">
+			<h6 class="logo">
+				<a href="https://www.seoul.go.kr/"  onclick="action_logging({tr_code:'gnb_seoul'});" title="서울특별시 홈으로 이동"><span class="sr-only">서울특별시 로고</span></a>
+			</h6>
+			<div class="gnb">
+				<ul class = "main">
+					<li><a href="/realmnews/in/list.do"			onclick="action_logging({tr_code:'gnb_news'});" >새소식</a></li>
+					<li><a href="/citizen/citizen.do"		 onclick="action_logging({tr_code:'top_menu05'});" >
+                        정책
+                        <div class = "toptrpmenu">
+                            <ul>
+                                <li>도시교통실</li>
+                            </ul>
+                        </div>
+                    </a></li>
+					<li class="info_cate"><a href="https://news.seoul.go.kr"	target="_blank"  onclick="action_logging({tr_code:'gnb_more'});" >
+                        버스•지하철
+                        <div class = "toptrpmenu">
+                            <div class = "toptrpmenu_m">
+                                <ul class = "toptrpmenu2">
+                                    <li>버스</li>
+                                    <li>버스</li>
+                                    <li>버스도착정보</li>
+                                </ul>
+                            </div>
+                            <div class = "toptrpmenu_m">
+                                <ul class = "toptrpmenu2">
+                                    <li>지하철</li>
+                                    <li>지하철</li>
+                                    <li>지하철도착정보</li>
+                                    <li>지하철 혼잡도 예보</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+					<!-- <button type="button" title="분야별정보 열기" class="btn_info_cate">분야별정보</button> -->
+                       <!--분야별 정보 내용,스크립트 2018-07-23 추가 주미숙-->
+					   <!--
+                       <section id="info_detail" class="info_detail">
+                           <h2>분야별 정보</h2>
+                           <ul>
+                               <li class="house">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/citybuild/"	onclick="action_logging({tr_code:'gnb_more'});" >주택</a></p>
+                               </li>
+                               <li class="economy">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/economy/"		onclick="action_logging({tr_code:'gnb_more'});" >경제</a></p>
+                               </li>
+                               <li class="traffic">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/traffic/"		onclick="action_logging({tr_code:'gnb_more'});" >교통</a></p>
+                               </li>
+                               <li class="environment">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/env/"			onclick="action_logging({tr_code:'gnb_more'});" >환경</a></p>
+                               </li>
+                               <li class="welfare">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/welfare/"		onclick="action_logging({tr_code:'gnb_more'});" >복지</a></p>
+                               </li>
+                               <li class="safty">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/safe/"		 	onclick="action_logging({tr_code:'gnb_more'});" >안전</a></p>
+                               </li>
+                               <li class="culture">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/culture/"		onclick="action_logging({tr_code:'gnb_more'});" >문화</a></p>
+                               </li>
+                               <li class="work">
+                                   <p class="m_tit"><a target="_blank" href="http://news.seoul.go.kr/gov/"			onclick="action_logging({tr_code:'gnb_more'});" >행정</a></p>
+                               </li>
+                           </ul>
+                           <p class="view_all"><a href="/service/all.do">서비스 전체보기</a></p>
+                           <button class="btn_close"><span class="sr-only">닫기</span></button>
+                       </section>
+					   -->
+					</li>
+					<li><a href="/seoul/seoul.do"			 onclick="action_logging({tr_code:'top_menu04'});" >교통정보</a></li>
+					<li><a href="//org.seoul.go.kr"	 onclick="action_logging({tr_code:'top_menu06'});" >교통안전</a></li>
+					<li><a href="//opengov.seoul.go.kr"   	onclick="action_logging({tr_code:'gnb_opnegov'});" target="_blank" title="새창열림">교통위반단속</a></li>
+					
+					
+				</ul>
+				<ul class="other">
+					<li id="li_loginIn"><a href="/member/userlogin/loginCheck.do" onclick="action_logging({tr_code:'top_menu01'});" >로그인</a></li>
+					<li id="li_loginOut" style="display:none" ><a href="/member/userlogin/logOut.do" onclick="action_logging({tr_code:'top_menu01'});" >로그아웃</a></li>
+					<li><a href="/member/info/mySeoul.do"	 onclick="action_logging({tr_code:'top_menu02'});" >나의서울</a></li>
+					
+					<li><a href="javascript:void(0)" 		 onclick="checkMailUserYn(); return false;" title="새창열림">전자우편</a></li>
+					<!-- <li><a href="/helper/siteMap.do">사이트맵</a></li> -->
+				</ul>
+				<input type="hidden" id="seoulEmailDelyn" value="">
+				<input type="hidden" id="mPk" value="">
+				<input type="hidden" id="islogin" value="">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

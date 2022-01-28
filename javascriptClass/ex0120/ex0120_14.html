@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table,th,td{border:1px solid black;}
+
+</style>
+
+</head>
+
+
+<body>
+<script>
+    function bmi_result(name,wei,hei){
+        if (name=="홍길동"){
+        var h_result = wei/((hei/100)*(hei/100))
+        document.getElementById("result1").innerText=h_result.toFixed(2);
+        }else if(name=="이순신"){
+        var l_result = wei/((hei/100)*(hei/100))
+        document.getElementById("result2").innerText=l_result.toFixed(2);
+        }
+    }
+    
+    function cal(){
+        new_name = document.getElementById("name").value;
+        new_w = document.getElementById("weight1").value;
+        new_h = document.getElementById("height1").value;
+
+        var result3 = new_w/((new_h/100)*(new_h/100));
+        document.getElementById("result3").innerText=result3.toFixed(2);
+        if (result3>=25){
+            
+        }else if (result3<=24){
+            return "정상입니다."
+        }
+    
+    }
+
+</script>    
+
+<button onclick = "bmi_result('홍길동',80,180)">홍길동</button>
+<h3>홍길동 BMI지수<span id ="result1"></span></h3>
+
+<button onclick = "bmi_result('이순신',70,167)">이순신</button>
+<h3>이순신 BMI지수<span id ="result2"></span></h3>
+<h2>BMI지수 계산기</h2>
+
+<input type="text" name="name" id="name" placeholder="이름을 입력하세요"><br>
+<input type="text" name="weight1" id="weight1" placeholder="몸무게를 입력하세요"><br>
+<input type="text" name="height1" id="height1" placeholder="키를 입력(cm로 넣어주세요) 입력하세요"><br>
+<button type="button" onclick="cal()">자동계산</button>
+
+<table>
+    <tr>
+        <td>bmi지수</td>
+        <td>결과값 출력 : <span id="result3"></span></td>
+        <td id="pandan"> </td>
+    
+    </tr>
+
+</table>
+</body>
+</html>

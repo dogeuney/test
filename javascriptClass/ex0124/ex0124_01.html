@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+
+        $(function(){
+            var count=1;
+            $("#num").val("1");
+            $("#btn").click(function(){
+            
+            var num = $("#num").val();
+            var title = $("#title").val();
+            var c_date = $("#c_date").val();
+            var id = $("#id").val();
+            var v_num = $("#v_num").val();
+            
+            var htmldata="";
+            htmldata += "<tr>";
+            htmldata += "<td>"+ num +"</td>";  
+            htmldata += "<td>"+ title +"</td>";     
+            htmldata += "<td>"+ c_date +"</td>";     
+            htmldata += "<td>"+ id +"</td>";
+            htmldata += "<td id >"+ num +"</td>";
+            // htmldata = htmldata+"<td>"+$("#").val()+"</td>";    
+            htmldata = htmldata+"</tr>";
+            
+            $("#info").prepend(htmldata);
+            $("#num").val("");
+            $("#title").val("");
+            $("#c_date").val("");
+            $("#id").val("");
+            
+            if 
+                    
+
+            });
+            // $("c_date").val("");
+                
+            });
+            function hitcount(num){
+                alert("호출된 번호 : ",num);
+            }
+        </script>
+    <style>
+        table,th,td{border:1px solid black; border-collapse: collapse; text-align: center;}
+        input{margin-bottom:10px;}
+        table{width:1300px ; margin:0 auto; border:1px solid white;}
+        th{width:200px; height: 20px; display:inline-block;}
+        label{width:80px; display:inline-block;}
+        textarea{width:800px; height: 500px; vertical-align: top;} 
+        </style>
+</head>
+<body>
+    <h2>게시판</h2>
+    <form>
+        <label>번호</label>
+        <input type="text" name="num" id="num" readonly><br>
+        <label>작성자</label>
+        <input type="text" name="id" id="id"><br>
+        <label>제목</label>
+        <input type="text" name="title" id="title"><br>
+        <label>내용</label>
+        <textarea name="content" id="content"></textarea><br>
+        <label>날짜</label>
+        <input type="date" name="c_date" id="c_date"><br>
+        <input type="button" id="btn" value="등록" >
+        
+    </form>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+                <th>작성자</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody id="info">
+            <tr>
+                <td colspan="5">현재 데이터가 없습니다.</td>
+            </tr>
+        </tbody>    
+    </table>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{border:1px solid black; border-collapse: collapse;}
+        th{width:80px;}
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+            <label>이름 입력 : </label>
+            <input type ="text" name="name" id ="name"><br>
+            <label>국어점수 입력 : </label>
+            <input type ="text" name="ko" id ="ko"><br>
+            <label>영어점수 입력 : </label>
+            <input type ="text" name="en" id ="en"><br>
+            <label>수학점수 입력 : </label>
+            <input type ="text" name="ma" id ="ma"><br>
+            <button type="button" onclick="cal()">확인 버튼</button><br>
+    </form>
+    <table>
+        <tr>
+            <th>이름</th>
+                
+            <th>국어</th>
+                
+            <th>영어</th>
+                
+            <th>수학</th>
+                
+            <th>합계</th>
+                
+            <th>평균</th>
+                
+        </tr>
+        <tr>
+            <td id = "nameid">이름</td>
+            <td id = "jumsu1">국어</td>
+            <td id = "jumsu2">영어</td>
+            <td id = "jumsu3">수학</td>
+            <td id = "sum">합계</td>
+            <td id = "avg">평균</td>
+        </tr>
+
+    </table>
+    <script>
+
+        function cal(){
+            var id = document.getElementById("name").value;
+            var jumsu1 = Number(document.getElementById("ko").value);
+            var jumsu2 = Number(document.getElementById("en").value);
+            var jumsu3 = Number(document.getElementById("ma").value);
+            var sum = jumsu1+jumsu2+jumsu3;
+            var avg = sum/3;
+
+            document.getElementById("nameid").innerText=nameid;
+            document.getElementById("jumsu1").innerText=jumsu1;
+            document.getElementById("jumsu2").innerText=jumsu2;
+            document.getElementById("jumsu3").innerText=jumsu3;
+            document.getElementById("sum").innerText=sum;
+            document.getElementById("avg").innerText=avg;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function cal(){
+            var a_num = parseInt(document.getElementById('a_num').value);
+            var b_num = parseInt(document.getElementById('b_num').value);
+            document.getElementById('p_num').innerText = a_num+b_num;
+            document.getElementById('m_num').innerText = a_num*b_num;
+            if (a_num>b_num) {
+                document.getElementById("c_num").innerText = a_num;}
+            else if (a_num<b_num) {
+                document.getElementById("c_num").innerText = b_num;}
+            
+            else{
+                document.getElementById("c_num").innerText = "같음";
+            }
+        }
+    </script>
+    <style>
+        table,th,td{border:1px solid black; border-collapse: collapse;
+        text-align:center;}
+        #p_num{color: red; font-weight: 600;}
+        #m_num{color: red; font-weight: 600;}
+        #c_num{color: green; font-weight: 600;}
+    </style>
+
+</head>
+<body>
+    <form action="" method="get">
+        <label>첫번째 값 입력 : </label>
+        <input type ="text" name="a_num" id ="a_num"><br>
+        <label>두번째 값 입력 : </label>
+        <input type ="text" name="b_num" id ="b_num"><br>
+        <button type="button" onclick="cal()">확인</button>
+    </form>
+    <h2>입력받은 값 연산</h2>
+    <table>
+        <tr>
+            <td>더하기</td>
+            <td id="p_num"></td>
+        </tr>
+        <tr>
+            <td>곱하기</td>
+            <td id="m_num"></td>
+        </tr>
+        <tr>
+            <td>비교</td>
+            <td id="c_num"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label>아이디 : </label>
+        <input type ="text" name="id" id ="id"><br>
+        <label>비밀번호 : </label>
+        <input type ="password" name="pw" id ="pw"><br>
+        <button type="button" onclick="checkID()">확인</button>
+    </form>
+    <script>
+        function checkID(){
+            var id = document.getElementById("id").value;
+            var pw = document.getElementById("pw").value;    
+            if((id=="admin") && (pw=="1111")){
+                document.write("로그인 성공");
+            }else{
+                alert("로그인 실패");
+            }
+        }
+
+
+//대문자 사용 안됨
+//함수명 변경 불가능
+//함수명 오타확인
+//폼, 바디, 스크립트 오타 확인
+
+
+
+
+
+    </script>
+</body>
+</html>

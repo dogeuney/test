@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userid = prompt("아이디를 입력하세요.");
+        var userpw = prompt("비밀번호를 입력하세요.");
+
+        if (userid=="admin" && userpw=="1111"){
+            alert("아이디와 패스워드가 일치합니다.");
+            location.href="http://www.naver.com";
+        }else{
+            alert("아이디와 패스워드가 일치하지 않습니다.");
+            location.reload();
+
+        }
+    </script>
+</body>
+</html>

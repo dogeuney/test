@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        label{width:80px; display: inline-block;}
+        input{margin-bottom:10px;}
+        textarea{width:400px; height:200px; vertical-align: top;}
+
+        table,th,td{border:1px solid black; border-collapse: collapse;
+                text-align: center;}
+        th,td{height:40px;}
+        table{width:1200px; }
+        tr td{cursor: pointer;}
+    </style>  
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                if ($.trim($("#title").val())==""){
+                    alert("제목을 입력하셔야 등록이 가능합니다.");
+                    $("#title").focus();
+                    return false;
+                };
+
+            });
+
+
+        });
+
+    </script>
+</head>
+<body>
+    <h2>게시판</h2>
+    <form>
+        <label>번호</label>
+        <input type="text" name="num" id="num" readonly><br>
+        <label>작성자</label>
+        <input type="text" name="id" id="id"><br>
+        <label>제목</label>
+        <input type="text" name="title" id="title"><br>
+        <label>내용</label>
+        <textarea name="content" id="content"></textarea><br>
+        <label>날짜</label>
+        <input type="date" name="c_date" id="c_date"><br>
+        <input type="button" id="btn" value="등록">
+        <input type="button" class="c02" value="class버튼">
+    </form>
+    <br><br>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>날짜</th>
+            <th>작성자</th>
+            <th>조회수</th>
+        </tr>
+        <!-- 글등록 -->
+        <tbody id="ctxt">
+            <tr>
+                <td colspan="5">현재 데이터가 없습니다.</td>
+            </tr>
+        </tbody>
+        
+    </table>
+</body>
+</html>

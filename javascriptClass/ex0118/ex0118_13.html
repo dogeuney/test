@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = prompt("숫자를 입력하세요.");
+        //90이상이면 a
+        //80이상이면 b -c-d-f
+        if (num>=90){
+            //100보다 큰 수입니다.
+            if (num>=97){
+                document.write("A+");
+            }else if (num>=94){
+                document.write("A");
+            }else{
+                document.write("A-");
+            }
+        }
+        else if (num>=80){
+            if (num>=87){
+                document.write("B+");
+            }else if (num>=84){
+                document.write("B");
+            }else{
+                document.write("B-");
+            }
+        }
+    </script>
+</body>
+</html>

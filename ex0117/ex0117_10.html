@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin:0; padding:0;}
+        #d01{box-sizing: border-box;
+             width: 500px; height: 200px;
+             background:blue;
+             border:1px solid black;
+        }
+        
+        
+        #d02{box-sizing: border-box;
+             width: 500px; height: 400px;
+             background:yellow;
+             border:1px solid black;
+        }
+        
+        
+        #d03{box-sizing: border-box;
+            width: 500px; height: 300px;
+            background:green;
+            border:1px solid black;
+        }
+        #d04{box-sizing: border-box;
+            width: 500px; height: 200px;
+            background:brown;
+            border:1px solid black;
+        }
+
+        @media screen and (max-width:100%){
+            .d01{display:none;}
+            .d02{display:block;}
+            .d03{
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="d01"></div>
+    <div id="d02"></div>
+    <div id="d03"></div>
+    <div id="d04"></div>
+
+</body>
+</html>
